@@ -6,10 +6,10 @@
 	<integer>11</integer>
 	<key>logs</key>
 	<dict>
-		<key>1B38CA9B-A476-46D9-86F6-5B698BF413C0</key>
+		<key>2DFA0E33-0CFA-4115-9DA6-B612DC42F9B0</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>1E393A6D-8AF8-4158-9AC4-77C13C908A79</string>
+			<string>7512AD4D-9C11-47F7-8686-F642FD59CA15</string>
 			<key>auxiliaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -30,7 +30,7 @@
 			<key>domainType</key>
 			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
 			<key>fileName</key>
-			<string>Run-Clock_model-2026.01.17_04-14-13-+0900.xcresult</string>
+			<string>Run-Clock_model-2026.01.17_05-42-26-+0900.xcresult</string>
 			<key>hasAuxiliaryLog</key>
 			<true/>
 			<key>hasConsoleLog</key>
@@ -59,13 +59,13 @@
 			<key>signature</key>
 			<string>Run Clock_model</string>
 			<key>timeStartedRecording</key>
-			<real>790283653.47947204</real>
+			<real>790288946.14145303</real>
 			<key>timeStoppedRecording</key>
 			<real>0.0</real>
 			<key>title</key>
 			<string>Run Clock_model</string>
 			<key>uniqueIdentifier</key>
-			<string>1B38CA9B-A476-46D9-86F6-5B698BF413C0</string>
+			<string>2DFA0E33-0CFA-4115-9DA6-B612DC42F9B0</string>
 		</dict>
 		<key>5E1F23F7-30A4-489D-811B-9DA0E7B137F4</key>
 		<dict>
@@ -127,189 +127,6 @@
 			<string>Run Clock_model</string>
 			<key>uniqueIdentifier</key>
 			<string>5E1F23F7-30A4-489D-811B-9DA0E7B137F4</string>
-		</dict>
-		<key>8585A488-FD36-402C-ADF9-647752282F63</key>
-		<dict>
-			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>6EF1A285-3FC7-4AD0-BE62-A202F9F5ED10</string>
-			<key>auxiliaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>0</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>0</integer>
-			</dict>
-			<key>className</key>
-			<string>IDESchemeActionsInvocationRecord</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
-			<key>fileName</key>
-			<string>Run-Clock_model-2026.01.17_05-16-31-+0900.xcresult</string>
-			<key>hasAuxiliaryLog</key>
-			<true/>
-			<key>hasConsoleLog</key>
-			<true/>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>0</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>0</integer>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Clock_model project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Clock_model</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Clock_model</string>
-			<key>timeStartedRecording</key>
-			<real>790287391.24484503</real>
-			<key>timeStoppedRecording</key>
-			<real>0.0</real>
-			<key>title</key>
-			<string>Run Clock_model</string>
-			<key>uniqueIdentifier</key>
-			<string>8585A488-FD36-402C-ADF9-647752282F63</string>
-		</dict>
-		<key>AF3C6E66-6369-4A4B-B233-0FC977C56CEF</key>
-		<dict>
-			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>38755B08-3A43-428A-9D67-04DDF1658DE3</string>
-			<key>auxiliaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>E</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>1</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>0</integer>
-			</dict>
-			<key>className</key>
-			<string>IDESchemeActionsInvocationRecord</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
-			<key>fileName</key>
-			<string>Run-Clock_model-2026.01.17_05-16-04-+0900.xcresult</string>
-			<key>hasAuxiliaryLog</key>
-			<true/>
-			<key>hasConsoleLog</key>
-			<true/>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>E</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>1</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>0</integer>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Clock_model project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Clock_model</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Clock_model</string>
-			<key>timeStartedRecording</key>
-			<real>790287364.22703505</real>
-			<key>timeStoppedRecording</key>
-			<real>0.0</real>
-			<key>title</key>
-			<string>Run Clock_model</string>
-			<key>uniqueIdentifier</key>
-			<string>AF3C6E66-6369-4A4B-B233-0FC977C56CEF</string>
-		</dict>
-		<key>B5870EB6-72DF-4056-BEE4-607F4D1F0110</key>
-		<dict>
-			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>C15B1E54-9F2D-41D2-A503-C1BEC6F77BDB</string>
-			<key>auxiliaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>0</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>0</integer>
-			</dict>
-			<key>className</key>
-			<string>IDESchemeActionsInvocationRecord</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
-			<key>fileName</key>
-			<string>Run-Clock_model-2026.01.17_04-46-52-+0900.xcresult</string>
-			<key>hasAuxiliaryLog</key>
-			<true/>
-			<key>hasConsoleLog</key>
-			<true/>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-				<key>totalNumberOfAnalyzerIssues</key>
-				<integer>0</integer>
-				<key>totalNumberOfErrors</key>
-				<integer>0</integer>
-				<key>totalNumberOfTestFailures</key>
-				<integer>0</integer>
-				<key>totalNumberOfWarnings</key>
-				<integer>0</integer>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Clock_model project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Clock_model</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Clock_model</string>
-			<key>timeStartedRecording</key>
-			<real>790285612.76771104</real>
-			<key>timeStoppedRecording</key>
-			<real>0.0</real>
-			<key>title</key>
-			<string>Run Clock_model</string>
-			<key>uniqueIdentifier</key>
-			<string>B5870EB6-72DF-4056-BEE4-607F4D1F0110</string>
 		</dict>
 	</dict>
 </dict>

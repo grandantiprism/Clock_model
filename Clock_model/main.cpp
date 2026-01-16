@@ -121,8 +121,8 @@ int main() {
     
     auto total_start = chrono::high_resolution_clock::now();
 
-    for (int i = 0; i <= beta_num; ++i) {
-        double beta = beta_max - (beta_max - beta_min) * i /beta_num;
+    for (int j = 0; j <= beta_num; ++j) {
+        double beta = beta_max - (beta_max - beta_min) * j /beta_num;
         
         string res_filename = dir_name + "/clock_q" + to_string(Q) + "_L" + to_string(L) +
         "_" + to_string(beta) + ".csv";

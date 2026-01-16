@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "35A5880B59DD50D97ECB603E023BAE5A2C764F73",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "35A5880B59DD50D97ECB603E023BAE5A2C764F73" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5DF19D21-7D37-4031-B1B4-27E8B78F086D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "35A5880B59DD50D97ECB603E023BAE5A2C764F73" : "Clock_model\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Clock_model",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Clock_model.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/grandantiprism\/Clock_model.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "35A5880B59DD50D97ECB603E023BAE5A2C764F73"
+    }
+  ]
+}
