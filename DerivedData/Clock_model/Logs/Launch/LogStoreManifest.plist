@@ -67,6 +67,67 @@
 			<key>uniqueIdentifier</key>
 			<string>1B38CA9B-A476-46D9-86F6-5B698BF413C0</string>
 		</dict>
+		<key>5E1F23F7-30A4-489D-811B-9DA0E7B137F4</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>42CC5B92-B8B6-46A0-91D2-9AB2B89B7811</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-Clock_model-2026.01.17_05-32-59-+0900.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Clock_model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Clock_model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Clock_model</string>
+			<key>timeStartedRecording</key>
+			<real>790288379.05118501</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run Clock_model</string>
+			<key>uniqueIdentifier</key>
+			<string>5E1F23F7-30A4-489D-811B-9DA0E7B137F4</string>
+		</dict>
 		<key>8585A488-FD36-402C-ADF9-647752282F63</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>

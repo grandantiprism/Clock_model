@@ -10,14 +10,14 @@ using namespace std;
 namespace fs = std::filesystem;
 
 // シミュレーションパラメータ
-const int L = 32;          // 格子サイズ
+const int L = 128;          // 格子サイズ
 const int N = L * L;       // サイト数
 const int Q = 6;           // 状態数 q
 const double beta_min = 1.05;
 const double beta_max = 1.55;
 const int beta_num = 25;
 const int MCS_THERM = 5000; // 熱平衡化のためのスイープ数
-const int MCS_MEAS = 5000; // 測定用のスイープ数
+const int MCS_MEAS = 100000; // 測定用のスイープ数
 const int MEAS_INTERVAL = 10; // 測定間隔
 
 // 乱数生成器
@@ -126,8 +126,17 @@ int main() {
         
         string res_filename = dir_name + "/clock_q" + to_string(Q) + "_L" + to_string(L) +
         "_" + to_string(beta) + ".csv";
-        ofstream ofs(res_filename);
-        ofs << "beta,Energy,Mx,My,M2x,M2y,M3x,M3y,I,S" << endl;
+        
+        // ファイルが既に存在するかチェック
+        bool exists = std::filesystem::exists(res_filename);
+
+        // ios::app を指定して追記モードで開く
+        ofstream ofs(res_filename, ios::app);
+
+        // 新規作成時のみヘッダーを書き込む
+        if (!exists) {
+            ofs << "beta,Energy,Mx,My,M2x,M2y,M3x,M3y,I,S" << endl;
+        }
         
         // 初期化 (低温側から始める場合は前回の状態を引き継ぐと収束が早い)
         for (int i = 0; i < MCS_THERM; ++i) {
