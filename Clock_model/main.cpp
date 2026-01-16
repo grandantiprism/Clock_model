@@ -178,7 +178,6 @@ int main() {
             << ", total_time=" << fixed << setprecision(2) << total_elapsed.count() << "s"
             << endl;
 
-    cout << "\nResults saved: " << res_filename << endl;
     cout << "Total time: " << total_elapsed.count() << "s" << endl;
 
     return 0;
