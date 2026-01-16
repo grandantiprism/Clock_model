@@ -7,6 +7,7 @@
 #include <numeric>
 
 using namespace std;
+namespace fs = std::filesystem;
 
 // シミュレーションパラメータ
 const int L = 32;          // 格子サイズ
@@ -110,14 +111,23 @@ void wolff(Lattice& lat, double beta) {
 int main() {
     Lattice lat;
     
-    string res_filename = "clock_q" + to_string(Q) + "_L" + to_string(L) + ".csv";
-    ofstream ofs(res_filename);
-    ofs << "beta,Energy,Mx,My,M2x,M2y,M3x,M3y,I,S" << endl;
+    string log_filename = "sim_log.txt";
+    
+    string dir_name = "output/q" + to_string(Q) + "_" + to_string(L) + "x" + to_string(L)
+    + "_beta" + to_string(beta_min) + "-" + to_string(beta_max) + "_" + to_string(beta_num);
+    if (!fs::exists(dir_name)) {
+        fs::create_directories(dir_name);
+    }
     
     auto total_start = chrono::high_resolution_clock::now();
 
     for (int i = 0; i <= beta_num; ++i) {
         double beta = beta_max - (beta_max - beta_min) * i /beta_num;
+        
+        string res_filename = dir_name + "/clock_q" + to_string(Q) + "_L" + to_string(L) +
+        "_" + to_string(beta) + ".csv";
+        ofstream ofs(res_filename);
+        ofs << "beta,Energy,Mx,My,M2x,M2y,M3x,M3y,I,S" << endl;
         
         // 初期化 (低温側から始める場合は前回の状態を引き継ぐと収束が早い)
         for (int i = 0; i < MCS_THERM; ++i) {
@@ -155,6 +165,21 @@ int main() {
         }
         cout << "Finished beta = " << beta << endl;
     }
+    
+    auto total_end = chrono::high_resolution_clock::now();
+    chrono::duration<double> total_elapsed = total_end - total_start;
+    
+    ofstream ofs_log(log_filename, ios::app);
+    ofs_log << "L=" << L
+            << ", beta_min=" << beta_min
+            << ", beta_max=" << beta_max
+            << ", beta_num=" << beta_num
+            << ", n_measure=" << MCS_MEAS
+            << ", total_time=" << fixed << setprecision(2) << total_elapsed.count() << "s"
+            << endl;
+
+    cout << "\nResults saved: " << res_filename << endl;
+    cout << "Total time: " << total_elapsed.count() << "s" << endl;
 
     return 0;
 }

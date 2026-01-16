@@ -1,0 +1,1 @@
+L=32, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=5000, total_time=78.76s

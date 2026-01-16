@@ -48,6 +48,48 @@
 			<key>uniqueIdentifier</key>
 			<string>1E393A6D-8AF8-4158-9AC4-77C13C908A79</string>
 		</dict>
+		<key>C15B1E54-9F2D-41D2-A503-C1BEC6F77BDB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C15B1E54-9F2D-41D2-A503-C1BEC6F77BDB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Clock_model project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Clock_model</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Clock_model</string>
+			<key>timeStartedRecording</key>
+			<real>790285612.77208698</real>
+			<key>timeStoppedRecording</key>
+			<real>790285616.63703501</real>
+			<key>title</key>
+			<string>Build Clock_model</string>
+			<key>uniqueIdentifier</key>
+			<string>C15B1E54-9F2D-41D2-A503-C1BEC6F77BDB</string>
+		</dict>
 	</dict>
 </dict>
 </plist>
