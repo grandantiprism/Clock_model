@@ -1,3 +1,14 @@
 L=32, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=5000, total_time=78.76s
 L=32, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=5000, total_time=82.43s
 L=32, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=5000, total_time=85.62s
+L=128, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=11403.57s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=225.86s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=215.72s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=218.48s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=312.65s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=321.77s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=304.49s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=303.25s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=310.12s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=100000, total_time=603.23s
+L=16, beta_min=1.05, beta_max=1.55, beta_num=25, n_measure=1000000, total_time=2551.40s

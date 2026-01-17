@@ -10,15 +10,15 @@ using namespace std;
 namespace fs = std::filesystem;
 
 // シミュレーションパラメータ
-const int L = 128;          // 格子サイズ
+const int L = 16;          // 格子サイズ
 const int N = L * L;       // サイト数
 const int Q = 6;           // 状態数 q
 const double beta_min = 1.05;
 const double beta_max = 1.55;
 const int beta_num = 25;
 const int MCS_THERM = 5000; // 熱平衡化のためのスイープ数
-const int MCS_MEAS = 100000; // 測定用のスイープ数
-const int MEAS_INTERVAL = 10; // 測定間隔
+const int MCS_MEAS = 1000000; // 測定用のスイープ数
+const int MEAS_INTERVAL = 1; // 測定間隔
 
 // 乱数生成器
 random_device rd;
@@ -34,7 +34,7 @@ struct Lattice {
 
     Lattice() : spins(N) {
         for (int i = 0; i < Q; ++i) {
-            angles[i] = 2.0 * M_PI * i / Q;
+            angles[i] = 2.0 * M_PI * i / (double)Q;
         }
     }
 
@@ -120,6 +120,8 @@ int main() {
     }
     
     auto total_start = chrono::high_resolution_clock::now();
+    
+    for(int s=0; s<N; ++s) lat.spins[s] = 0;
 
     for (int j = 0; j <= beta_num; ++j) {
         double beta = beta_max - (beta_max - beta_min) * j /beta_num;
@@ -149,27 +151,58 @@ int main() {
             wolff(lat, beta);
 
             if (i % MEAS_INTERVAL == 0) {
-                double energy = 0, mx = 0, my = 0, m2x = 0, m2y = 0, m3x = 0, m3y = 0, I = 0, S = 0;
+                // 1. 変数の初期化 (各測定タイミングでリセット)
+                double energy = 0.0;
+                double mx = 0.0, my = 0.0;
+                double m2x = 0.0, m2y = 0.0;
+                double m3x = 0.0, m3y = 0.0;
+                double I_val = 0.0;
+                double S_val = 0.0;
+
                 for (int s = 0; s < N; ++s) {
                     double theta = lat.angles[lat.spins[s]];
+                    
+                    // --- 磁化 (各成分) ---
                     mx += cos(theta);
                     my += sin(theta);
-                    m2x += cos(2 * theta);
-                    m2y += sin(2 * theta);
-                    m3x += cos(3 * theta);
-                    m3y += sin(3 * theta);
+                    m2x += cos(2.0 * theta);
+                    m2y += sin(2.0 * theta);
+                    m3x += cos(3.0 * theta);
+                    m3y += sin(3.0 * theta);
                     
-                    // エネルギーとヘリシティ係数 (x方向の結合のみ I, S に使用)
+                    // --- 隣接サイトの取得 ---
                     int r = lat.get_right(s);
                     int d = lat.get_down(s);
-                    energy -= cos(theta - lat.angles[lat.spins[r]]);
-                    energy -= cos(theta - lat.angles[lat.spins[d]]);
+                    double theta_r = lat.angles[lat.spins[r]];
+                    double theta_d = lat.angles[lat.spins[d]];
                     
-                    I += cos(theta - lat.angles[lat.spins[r]]);
-                    S += sin(theta - lat.angles[lat.spins[r]]);
+                    auto get_diff = [](double a, double b) {
+                        double d = a - b;
+                        while (d >  M_PI) d -= 2.0 * M_PI;
+                        while (d <= -M_PI) d += 2.0 * M_PI;
+                        return d;
+                    };
+
+                    double diff_r = get_diff(theta, theta_r);
+                    double diff_d = get_diff(theta, theta_d);
+
+                    // エネルギー (全方向)
+                    energy -= cos(diff_r);
+                    energy -= cos(diff_d);
+
+                    // ヘリシティ係数 (x方向のみ)
+                    I_val += cos(diff_r);
+                    S_val += sin(diff_r);
                 }
-                ofs << beta << "," << energy << "," << mx << "," << my << ","
-                    << m2x << "," << m2y << "," << m3x << "," << m3y << "," << I << "," << S << endl;
+
+                // 2. ファイルへの書き出し
+                // 集計した生の和を書き出す（Nでの正規化は解析時に行う方が精度が良い）
+                ofs << beta << ","
+                    << energy << ","
+                    << mx << "," << my << ","
+                    << m2x << "," << m2y << ","
+                    << m3x << "," << m3y << ","
+                    << I_val << "," << S_val << endl;
             }
         }
         cout << "Finished beta = " << beta << endl;
